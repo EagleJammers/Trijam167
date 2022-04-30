@@ -25,10 +25,6 @@ public class Player : MonoBehaviour
         float yMove = Input.GetAxisRaw("Vertical");
         float xMove = Input.GetAxisRaw("Horizontal");
 
-        if( xMove != 0 || yMove != 0)
-            transform.position += new Vector3(xMove,yMove,0).normalized*Time.deltaTime * movementSpeed;
-
-
         Mana += (manaPerSecond/Time.deltaTime);
         if (Mana >= MaxMana)
         {
