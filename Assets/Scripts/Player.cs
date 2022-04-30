@@ -24,8 +24,9 @@ public class Player : MonoBehaviour
     {
 
 
-        var movement = Input.GetAxis("Vertical");
-        transform.position += new Vector3(0,movement, 0) * Time.deltaTime * movementSpeed;
+        var movementVert = Input.GetAxis("Vertical");
+        var movementHori = Input.GetAxis("Horizontal");
+        transform.position += new Vector3(movementHori,movementVert, 0) * Time.deltaTime * movementSpeed;
 
       
 
