@@ -21,7 +21,7 @@ public class BulletSpawner : MonoBehaviour
         time++;
 
         if (time % freq == 0) {
-            Debug.Log("spawn");
+
             Instantiate(bullet, this.transform.position, Quaternion.identity); 
         }
     }
