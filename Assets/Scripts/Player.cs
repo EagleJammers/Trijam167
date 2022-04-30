@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-
+    [SerializeField] private UIManager ui;
     public float movementSpeed = 2;
     public float manaPerSecond = 10;
     private int Health = 3;
@@ -29,7 +29,8 @@ public class Player : MonoBehaviour
         if (Mana >= MaxMana)
         {
             Mana = MaxMana;
-            Debug.Log($"Current mana: {Mana}");
+            //Debug.Log($"Current mana: {Mana}");
+            ui.set_shown_mana(Mana);
         }
     }
 }
