@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Slowtime : MonoBehaviour
 {
-    // Toggles the time scale between 1 and 0.7
-    // whenever the user hits the Fire1 button.
+    // Toggles the time scale between 1 and slowness_percent
+    // whenever the user hits the Space key.
 
     private float fixedDeltaTime;
     [SerializeField] private float slowness_percent = 0.3f;
@@ -18,6 +18,7 @@ public class Slowtime : MonoBehaviour
 
     void Update()
     {
+        //This will currently only just toggle the time when you press space -- Steven.
         if (Input.GetButtonDown("Jump"))
         {
             if (Time.timeScale == 1.0f)
