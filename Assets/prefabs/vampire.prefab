@@ -95,5 +95,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1ee9d986d4b074ca77078f71c4a245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 333513375194861693, guid: 961b6fa9983c1eb49a402e8f5d517cb7, type: 3}
+  bullet: {fileID: 6474711356911992695, guid: 961b6fa9983c1eb49a402e8f5d517cb7, type: 3}
   freq: 600
