@@ -4,17 +4,33 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float velocity = .01f; 
+    public GameObject player; 
+    public float velocity = .001f;
+    private float ySpeed;
+    private float xSpeed; 
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Get the player's y 
+        float playerY = player.transform.position.y;
+
+        //get my y 
+        float thisY = this.transform.position.y;
+
+        float deltaX = player.transform.position.x - this.transform.position.x;
+        float deltaY = playerY - thisY;
+
+        //Determine the y val 
+        ySpeed = deltaY * velocity;
+        xSpeed = deltaX * velocity; 
+        Debug.Log(ySpeed); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(velocity, 0, 0));
+        //move at this rate x and y 
+        transform.Translate(new Vector3(xSpeed, ySpeed, 0));
     }
 }
