@@ -22,8 +22,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float yMove = Input.GetAxisRaw("Vertical");
-        float xMove = Input.GetAxisRaw("Horizontal");
+        var xMove = Input.GetAxis("Vertical");
+        var yMove = Input.GetAxis("Horizontal");
+        transform.position += new Vector3(xMove,yMove, 0) * Time.deltaTime * movementSpeed;
 
         if (yMove != 0 || xMove != 0)
         {
