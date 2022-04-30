@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+
+    public CharacterController controllerMain;
+    public float movementSpeed = 2;
     private Renderer rend;
+
 
     // Start is called before the first frame update
     void Start()
     {
-
-  
          rend = GetComponent<Renderer>();
+
 
     }
 
@@ -19,11 +23,14 @@ public class Player : MonoBehaviour
     void Update()
     {
 
+
+        var movement = Input.GetAxis("Vertical");
+        transform.position += new Vector3(0,movement, 0) * Time.deltaTime * movementSpeed;
+
       
 
         float ud = Input.GetAxis("Vertical");
         float lr = Input.GetAxis("Horizontal");
-
         
        
         if (ud != 0 || lr != 0)
