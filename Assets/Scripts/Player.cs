@@ -13,14 +13,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
 
-
-        float ud = Input.GetAxisRaw("Vertical");
+        float ud = Input.GetAxis("Vertical");
         float lr = Input.GetAxis("Horizontal");
 
-    
+        
        
-        if (up != 0 || down != 0)
+        if (ud != 0 || lr != 0)
         {
             Debug.Log("Moving");
 
