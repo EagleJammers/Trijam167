@@ -22,9 +22,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var xMove = Input.GetAxis("Vertical");
-        var yMove = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(xMove,yMove, 0) * Time.deltaTime * movementSpeed;
+        var yMove = Input.GetAxis("Vertical");
+        var xMove = Input.GetAxis("Horizontal");
+
 
         if (yMove != 0 || xMove != 0)
         {
