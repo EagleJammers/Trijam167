@@ -137,13 +137,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 290126449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1a858e4f0b864ff787bc53d08d84fd9, type: 3}
+  m_Script: {fileID: 11500000, guid: d1023a3ffb475344eb7e004af30dd303, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  show: 0
-  countChocolua: {fileID: 2800000, guid: 3d437e02fff1801478c42ecdc622f2a2, type: 3}
-  showtime: 5
-  showleft: 0
+  slowness_percent: 0.3
+  player: {fileID: 423640622}
+--- !u!114 &423640622 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2175554206726108594, guid: 4856c00237157d641ad1d6454bf77c53, type: 3}
+  m_PrefabInstance: {fileID: 2175554207056478380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58d7e47e0a720f4685bfdc083b41551, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &1024594716
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +539,10 @@ PrefabInstance:
       propertyPath: ui
       value:
       objectReference: {fileID: 1457672862}
+    - target: {fileID: 2175554206726108594, guid: 4856c00237157d641ad1d6454bf77c53, type: 3}
+      propertyPath: movementSpeed
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4856c00237157d641ad1d6454bf77c53, type: 3}
 --- !u!1001 &5792890517040557598
@@ -539,6 +552,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5792890516998052288, guid: 154530f264b5b87449b7f4507a9bbece, type: 3}
+      propertyPath: vamp
+      value:
+      objectReference: {fileID: 2140869090999069742, guid: 80aeae2f1971423408a57c4218a44b3c, type: 3}
     - target: {fileID: 8718879497559594119, guid: 154530f264b5b87449b7f4507a9bbece, type: 3}
       propertyPath: m_Name
       value: Walls
