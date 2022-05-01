@@ -25,19 +25,19 @@ public class Bullet : MonoBehaviour
         transform.Translate(new Vector3(deltaX, deltaY, 0).normalized * Time.deltaTime * velocity);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject collide = collision.gameObject;
         string collidetag = collide.tag;
-
+        
         if(collidetag == "Player")
         {
           //collision.gameObject.damage()
-          Destroy(this);
+          Destroy(this.gameObject);
         }
         else if(collidetag == "Wall")
         {
-          Destroy(this);
+          Destroy(this.gameObject);
         }
 
     }
