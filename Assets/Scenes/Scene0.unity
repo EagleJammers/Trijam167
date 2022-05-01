@@ -137,23 +137,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 838930012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb845e27eec70546962439a17d2b213, type: 3}
+  m_Script: {fileID: 11500000, guid: d1a858e4f0b864ff787bc53d08d84fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  show: 0
   countChocolua: {fileID: 2800000, guid: 3d437e02fff1801478c42ecdc622f2a2, type: 3}
---- !u!114 &838930018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838930012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1023a3ffb475344eb7e004af30dd303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slowness_percent: 0.3
+  showtime: 5
+  showleft: 0
 --- !u!1 &1024594716
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,18 +451,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4125347910891221340, guid: 2bc77be5c7aac44249768363a441e8d9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 11.4879
-      objectReference: {fileID: 0}
-    - target: {fileID: 4125347910891221340, guid: 2bc77be5c7aac44249768363a441e8d9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 11.4879
-      objectReference: {fileID: 0}
-    - target: {fileID: 4125347910891221340, guid: 2bc77be5c7aac44249768363a441e8d9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 11.4879
-      objectReference: {fileID: 0}
-    - target: {fileID: 4125347910891221340, guid: 2bc77be5c7aac44249768363a441e8d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -520,9 +498,10 @@ PrefabInstance:
       propertyPath: ui
       value: 
       objectReference: {fileID: 1457672862}
-    - target: {fileID: 4125347910891221346, guid: 2bc77be5c7aac44249768363a441e8d9, type: 3}
-      propertyPath: movementSpeed
-      value: 102.47
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7645824582384050732, guid: 2bc77be5c7aac44249768363a441e8d9, type: 3}
+      propertyPath: countChocolua
+      value: 
+      objectReference: {fileID: 2800000, guid: 3d437e02fff1801478c42ecdc622f2a2, type: 3}
+    m_RemovedComponents:
+    - {fileID: 7645824582384050732, guid: 2bc77be5c7aac44249768363a441e8d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2bc77be5c7aac44249768363a441e8d9, type: 3}

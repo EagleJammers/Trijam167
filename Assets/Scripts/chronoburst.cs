@@ -5,11 +5,18 @@ using UnityEngine;
 public class chronoburst : MonoBehaviour
 {
 
+    [SerializeField]
     private bool show;
-    public Texture countChocolua;
+    [SerializeField]
+    private Texture countChocolua;
+    [SerializeField]
+    private int showtime = 5;
+    [SerializeField]
+    private int showleft;
     // Start is called before the first frame update
     void Start()
     {
+        showleft = showtime;
         show = false;
     }
 
@@ -24,13 +31,28 @@ public class chronoburst : MonoBehaviour
     {
         if (Input.GetKeyDown("i")){
 
-            show = true;
+          Burst();
 
         }
+        if (show){
+           ShowUpdate();
+          }
+    }
 
-        else if (Input.GetKeyDown("p")) {
-            show = false;
-        }
+    void Burst()
+    {
+      show = true;
+      GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+      foreach (GameObject enemy in enemies) Destroy(enemy);
+    }
 
+    void ShowUpdate()
+    {
+      showleft -= 1;
+      if (showleft <= 0)
+      {
+        show = false;
+        showleft = showtime;
+      }
     }
 }
