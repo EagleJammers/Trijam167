@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4125347910891221347}
   - component: {fileID: 4125347910891221346}
   - component: {fileID: 5719217494559555079}
+  - component: {fileID: 838930018}
+  - component: {fileID: 7645824582384050732}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4125347910891221345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 11.4879, y: 11.4879, z: 11.4879}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 0}
-  movementSpeed: 4
+  movementSpeed: 102.47
   manaPerSecond: 10
 --- !u!58 &5719217494559555079
 CircleCollider2D:
@@ -115,3 +117,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.14
+--- !u!114 &838930018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4125347910891221345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1023a3ffb475344eb7e004af30dd303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowness_percent: 0.3
+--- !u!114 &7645824582384050732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4125347910891221345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a858e4f0b864ff787bc53d08d84fd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countChocolua: {fileID: 0}
