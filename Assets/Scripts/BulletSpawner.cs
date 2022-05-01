@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletSpawner : MonoBehaviour
 {
     public GameObject bullet;
-    public int freq = 600;
+    public int freq = 6;
 
     private int time = 0;
     // Start is called before the first frame update
@@ -15,7 +15,7 @@ public class BulletSpawner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Spawns a bullet at its location every 10 seconds
         time++;

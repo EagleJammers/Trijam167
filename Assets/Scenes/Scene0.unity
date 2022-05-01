@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier:
   slowness_percent: 0.3
-  player: {fileID: 423640622}
---- !u!114 &423640622 stripped
+  player: {fileID: 347174174}
+--- !u!114 &347174174 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2175554206726108594, guid: 4856c00237157d641ad1d6454bf77c53, type: 3}
   m_PrefabInstance: {fileID: 2175554207056478380}
@@ -445,27 +445,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2180199717816319667, guid: 3059cd45c1246554f840ffc3d037e99f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1199.9987
+      value: 494.99866
       objectReference: {fileID: 0}
     - target: {fileID: 2180199717816319667, guid: 3059cd45c1246554f840ffc3d037e99f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 616.9612
+      value: 226.96118
       objectReference: {fileID: 0}
     - target: {fileID: 2180199718075185188, guid: 3059cd45c1246554f840ffc3d037e99f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1200
+      value: 495
       objectReference: {fileID: 0}
     - target: {fileID: 2180199718075185188, guid: 3059cd45c1246554f840ffc3d037e99f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 672
+      value: 282
       objectReference: {fileID: 0}
     - target: {fileID: 2180199719072256327, guid: 3059cd45c1246554f840ffc3d037e99f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1126
+      value: -485.49
       objectReference: {fileID: 0}
     - target: {fileID: 2180199719072256327, guid: 3059cd45c1246554f840ffc3d037e99f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 646
+      value: 279.44
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3059cd45c1246554f840ffc3d037e99f, type: 3}
@@ -541,7 +541,7 @@ PrefabInstance:
       objectReference: {fileID: 1457672862}
     - target: {fileID: 2175554206726108594, guid: 4856c00237157d641ad1d6454bf77c53, type: 3}
       propertyPath: movementSpeed
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4856c00237157d641ad1d6454bf77c53, type: 3}
@@ -613,6 +613,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2140869090999069739, guid: 80aeae2f1971423408a57c4218a44b3c, type: 3}
+      propertyPath: freq
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2140869090999069740, guid: 80aeae2f1971423408a57c4218a44b3c, type: 3}
       propertyPath: m_RootOrder
       value: 4
