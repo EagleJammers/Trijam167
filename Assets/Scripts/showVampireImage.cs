@@ -15,7 +15,7 @@ public class showVampireImage : MonoBehaviour
 
      void OnGUI () {
          if (show) {
-             GUI.DrawTexture(new Rect(0,0,1280,720), countChocolua);
+             GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height), countChocolua);
          }
      }
 
