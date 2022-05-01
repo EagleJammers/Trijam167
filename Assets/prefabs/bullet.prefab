@@ -93,23 +93,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfc1c868a7617044487194efdd885037, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  player: {fileID: 9151396091190584063, guid: 3bc23357c67da784bb6b0ca0a5502c18, type: 3}
-  velocity: 0.001
---- !u!58 &-4001213288244881486
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333513375194861693}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.235
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 10
