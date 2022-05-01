@@ -35,10 +35,10 @@ public class Player : MonoBehaviour
             this.transform.Translate(new Vector3(xMove, yMove,0).normalized*Time.deltaTime*movementSpeed);
         }
 
-        
 
 
-        
+
+
         if(!Input.GetButton("Jump")){
             if (Mana < MaxMana)
                 Mana += (manaPerSecond*Time.deltaTime);
@@ -62,5 +62,6 @@ public class Player : MonoBehaviour
     public void Damage()
     {
       this.Health -= 1;
+      if (this.Health <= 0) Destroy(this);
     }
 }
