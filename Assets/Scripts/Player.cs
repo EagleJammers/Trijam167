@@ -25,12 +25,21 @@ public class Player : MonoBehaviour
         float yMove = Input.GetAxisRaw("Vertical");
         float xMove = Input.GetAxisRaw("Horizontal");
 
-        Mana += (manaPerSecond/Time.deltaTime);
-        if (Mana >= MaxMana)
+        if (yMove != 0 || xMove != 0)
         {
-            Mana = MaxMana;
-            //Debug.Log($"Current mana: {Mana}");
-            ui.set_shown_mana(Mana);
+            this.transform.position += new Vector3(xMove, yMove, 0) * Time.deltaTime * movementSpeed;
         }
+
+         
+        if (Mana < MaxMana)
+            Mana += (manaPerSecond*Time.deltaTime);
+        else
+            Mana = MaxMana;
+
+
+        ui.set_shown_health(Health);
+        ui.set_shown_mana(Mana);
     }
+
+
 }
