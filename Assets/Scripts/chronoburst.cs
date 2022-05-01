@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class showVampireImage : MonoBehaviour
+public class chronoburst : MonoBehaviour
 {
 
     private bool show;
@@ -10,7 +10,7 @@ public class showVampireImage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        show = false; 
+        show = false;
     }
 
      void OnGUI () {
@@ -23,7 +23,7 @@ public class showVampireImage : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("i")){
-            
+
             show = true;
 
         }
