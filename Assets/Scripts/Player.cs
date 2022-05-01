@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] private UIManager ui;
+    [SerializeField] private Rigidbody2D rb;
     public float movementSpeed = 2;
     public float manaPerSecond = 10;
     private int Health = 3;
@@ -28,7 +29,7 @@ public class Player : MonoBehaviour
 
         if (yMove != 0 || xMove != 0)
         {
-            this.transform.position += new Vector3(xMove, yMove, 0) * Time.deltaTime * movementSpeed;
+            rb.MovePosition(rb.position + new Vector2(xMove, yMove).normalized*Time.deltaTime*movementSpeed);
         }
 
 
