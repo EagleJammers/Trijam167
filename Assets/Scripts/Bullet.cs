@@ -4,34 +4,25 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public float velocity = .001f;
-    private float ySpeed;
-    private float xSpeed;
 
+    private float deltaX;
+    private float deltaY;
     // Start is called before the first frame update
     void Start()
     {
-        //Get the player's y
-        float playerY = player.transform.position.y;
 
-        //get my y
-        float thisY = this.transform.position.y;
-
-        float deltaX = player.transform.position.x - this.transform.position.x;
-        float deltaY = playerY - thisY;
-
-        //Determine the y val
-        ySpeed = deltaY * velocity;
-        xSpeed = deltaX * velocity;
-        Debug.Log(ySpeed);
+        player = GameObject.FindGameObjectWithTag("Player");
+        deltaX = player.transform.position.x - this.transform.position.x;
+        deltaY = player.transform.position.y - this.transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
         //move at this rate x and y
-        transform.Translate(new Vector3(xSpeed, ySpeed, 0));
+        transform.Translate(new Vector3(deltaX, deltaY, 0).normalized * Time.deltaTime * velocity);
     }
 
     void OnCollisionEnter(Collision collision)

@@ -9,8 +9,8 @@ public class Player : MonoBehaviour
     public float movementSpeed = 2;
     public float manaPerSecond = 10;
     private int Health = 3;
-    private float Mana = 0;
-    private float MaxMana = 100;
+    private float Mana = 0f;
+    private float MaxMana = 100f;
 
     // Start is called before the first frame update
 
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
             this.transform.position += new Vector3(xMove, yMove, 0) * Time.deltaTime * movementSpeed;
         }
 
-         
+
         if (Mana < MaxMana)
             Mana += (manaPerSecond*Time.deltaTime);
         else
@@ -42,5 +42,8 @@ public class Player : MonoBehaviour
         ui.set_shown_mana(Mana);
     }
 
-
+    public void Damage()
+    {
+      this.Health -= 1;
+    }
 }
