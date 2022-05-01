@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Slowtime : MonoBehaviour
 {
-    // Toggles the time scale between 1 and slowness_percent
+    // Toggles the time scale between 1 and slow_mult
     // whenever the user hits the Space key.
 
     private float fixedDeltaTime;
-    [SerializeField] private float slowness_percent = 0.3f;
     [SerializeField] private Player player;
+    [SerializeField] private float slow_mult = 0.3f;
+
 
     void Awake()
     {
@@ -23,10 +24,9 @@ public class Slowtime : MonoBehaviour
         if (Input.GetButton("Jump") && player.Mana > 0)
         {
             if (Time.timeScale == 1.0f)
-                Time.timeScale = slowness_percent;
-        }
-        else {
-            Time.timeScale = 1.0f;
+                Time.timeScale = slow_mult;
+            else
+                Time.timeScale = 1.0f;
             // Adjust fixed delta time according to timescale
             // The fixed delta time will now be 0.02 real-time seconds per frame
             Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;

@@ -12,7 +12,7 @@ public class VampSpawner : MonoBehaviour
     [SerializeField] private float spawn_interval = 10f;
 
     [Tooltip("how wide is the box the player is in? so we dont spawn things outside of it.")]
-    [SerializeField] private float world_width = 40f;
+    [SerializeField] private float world_width = 75f;
     [Tooltip("how tall is the box the player is in? so we dont spawn things outside of it.")]
     [SerializeField] private float world_height = 40f;
 
