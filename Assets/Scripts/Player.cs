@@ -9,8 +9,12 @@ public class Player : MonoBehaviour
     public float movementSpeed = 2;
     public float manaPerSecond = 10;
     private int Health = 3;
-    private float Mana = 0f;
+    public float Mana = 0f;
     private float MaxMana = 100f;
+    [SerializeField] private float manaDrainMultiplier = 3f;
+
+    private float minMana = 0f;
+    //private bool slowTimeInUse = false;
 
     // Start is called before the first frame update
 
@@ -31,11 +35,24 @@ public class Player : MonoBehaviour
             this.transform.Translate(new Vector3(xMove, yMove,0).normalized*Time.deltaTime*movementSpeed);
         }
 
+        
 
-        if (Mana < MaxMana)
-            Mana += (manaPerSecond*Time.deltaTime);
-        else
-            Mana = MaxMana;
+
+        
+        if(!Input.GetButton("Jump")){
+            if (Mana < MaxMana)
+                Mana += (manaPerSecond*Time.deltaTime);
+            else
+                Mana = MaxMana;
+        }
+        else if (Input.GetButton("Jump")){
+            if (Mana > minMana) {
+                Mana -= (manaPerSecond*Time.deltaTime*manaDrainMultiplier);
+            }
+            else {
+                Mana = minMana;
+            }
+        }
 
 
         ui.set_shown_health(Health);

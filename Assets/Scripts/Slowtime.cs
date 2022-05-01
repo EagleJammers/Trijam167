@@ -9,6 +9,7 @@ public class Slowtime : MonoBehaviour
 
     private float fixedDeltaTime;
     [SerializeField] private float slowness_percent = 0.3f;
+    [SerializeField] private Player player;
 
     void Awake()
     {
@@ -19,12 +20,13 @@ public class Slowtime : MonoBehaviour
     void Update()
     {
         //This will currently only just toggle the time when you press space -- Steven.
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButton("Jump") && player.Mana > 0)
         {
             if (Time.timeScale == 1.0f)
                 Time.timeScale = slowness_percent;
-            else
-                Time.timeScale = 1.0f;
+        }
+        else {
+            Time.timeScale = 1.0f;
             // Adjust fixed delta time according to timescale
             // The fixed delta time will now be 0.02 real-time seconds per frame
             Time.fixedDeltaTime = this.fixedDeltaTime * Time.timeScale;
