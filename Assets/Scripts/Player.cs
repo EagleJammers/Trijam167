@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] private UIManager ui;
-    [SerializeField] private Rigidbody2D rb;
     public float movementSpeed = 2;
     public float manaPerSecond = 10;
     private int Health = 3;
@@ -21,15 +20,15 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        var yMove = Input.GetAxis("Vertical");
-        var xMove = Input.GetAxis("Horizontal");
+        var yMove = Input.GetAxisRaw("Vertical");
+        var xMove = Input.GetAxisRaw("Horizontal");
 
 
         if (yMove != 0 || xMove != 0)
         {
-            rb.MovePosition(rb.position + new Vector2(xMove, yMove).normalized*Time.deltaTime*movementSpeed);
+            this.transform.Translate(new Vector3(xMove, yMove,0).normalized*Time.deltaTime*movementSpeed);
         }
 
 
